@@ -36,15 +36,7 @@ positive = 0
 negative = 0
 neutral = 0
 
-#remove any RT or names of users because we just want the contents of the tweet.
-
-print('Loading...')
-time.sleep(0.5)
-print('Loading...')
-time.sleep(0.5)
-print('Loading...')
-time.sleep(1)
-
+#remove any RT or names of users because we just want the contents of the tweets
 for tweet in tweets:
     output = tweet.text.replace('RT', '')
     if output.startswith(' @'):
@@ -65,13 +57,6 @@ for tweet in tweets:
         negative += 1
     else:
         neutral += 1
-
-print('Loading...')
-time.sleep(0.5)
-print('Loading...')
-time.sleep(0.5)
-print('Loading...')
-time.sleep(3)
 
 if polarity > 15:
     print(f'On Twitter, {search_term} has a very positive sentiment with a polarity of {polarity}.')
